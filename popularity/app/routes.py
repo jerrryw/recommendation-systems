@@ -105,7 +105,6 @@ def set_global_df(new_df):
     df.drop(df.index, inplace=True)
     df.update(new_df)
 
-# Load data and model at startup
 set_global_df(load_data_from_s3())
 model = ProductNameSimilarityModel(csv_path=csv_local_path, save_model_dir=model_dir)
 

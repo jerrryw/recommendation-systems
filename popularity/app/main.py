@@ -15,6 +15,7 @@ async def lifespan(app: FastAPI):
     model = ProductNameSimilarityModel(csv_path=CSV_LOCAL_PATH, save_model_dir=MODEL_DIR)
 
     print("Startup complete: Data loaded and model initialized.")
+
     yield
 
     print("Shutdown complete.")

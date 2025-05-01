@@ -12,7 +12,6 @@ COPY . .
 COPY app/ ./app
 
 # Install Python dependencies
-RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port for FastAPI
